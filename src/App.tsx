@@ -7,6 +7,7 @@ import QuestionCard from "./components/QuestionCard"
 function App() {
 
   let [quiz, setQuiz] = useState<quiz_type[]>([])
+  let [currentStep,setCurrentStep] =useState(0)
 
   useEffect(() => {
     async function getquestion() {
@@ -19,15 +20,24 @@ function App() {
   if (!quiz.length) {
     return <h1>Loading</h1>
   }
+  const handleSubmit = ((e:React.FormEvent<EventTarget>)=>{
+    e.preventDefault();
+    if (currentStep!==quiz.length-1)
+     setCurrentStep(++currentStep)
+    else {
+      setCurrentStep(0)
+    }
+  })
   //  val = { quiz[1].options }
-  console.log(quiz)
-  console.log(quiz[0].options)
+  // console.log(quiz)
+  // console.log(quiz[0].options)
   return (
     <div className="App">
       {/* <h4>{quiz[0].options}</h4> */}
       <QuestionCard
-      question={quiz[0].question}
-      options={quiz[0].options}
+      question={quiz[currentStep].question}
+      options={quiz[currentStep].options}
+      callback={handleSubmit}
       />
 
     </div>
