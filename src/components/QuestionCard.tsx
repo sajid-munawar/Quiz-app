@@ -1,10 +1,9 @@
-import React from 'react';
-const QuestionCard:React.FC<any>= ((
-    question,
-    options
-)=>{
+import React,{FC} from 'react';
+const QuestionCard:FC<any>= ({question,options})=>{
+    // console.log("question="+question)
+    // console.log("oop= "+options)
     return <div>
-        Hello
+
     </div>
-})
+}
 export default QuestionCard;
