@@ -21,12 +21,13 @@ function App() {
   }
   //  val = { quiz[1].options }
   console.log(quiz)
-  console.log(quiz[1].question)
+  console.log(quiz[1].options)
   return (
     <div className="App">
+      <h4>{quiz[0].options}</h4>
       <QuestionCard
       question={quiz[0].question}
-      option={quiz[0].options}
+      options={quiz[0].options}
       />
 
     </div>
