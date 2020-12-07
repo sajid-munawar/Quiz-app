@@ -15,6 +15,8 @@ const QuestionCard: FC<questionPropsType> = ({ question, options,callback }) => 
                 <input type="radio"
                  name="opt"
                   value={opt}
+                  required
+                  checked={selected === opt}
                   onChange={handleSubmit}
                   />
                 {opt}
