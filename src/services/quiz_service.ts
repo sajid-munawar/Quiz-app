@@ -10,6 +10,7 @@ export const getQuiz=async(total:number,level:string):Promise<quiz_type[]>=>{
         return {
             question:questionObj.question,
             answer:questionObj.correct_answer,
+            correct_answer:questionObj.correct_answer,
             options:shuffleArray(questionObj.incorrect_answers.concat(questionObj.correct_answer))
         }
     })
