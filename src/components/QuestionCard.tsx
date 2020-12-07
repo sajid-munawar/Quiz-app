@@ -9,7 +9,10 @@ const QuestionCard: FC<questionPropsType> = ({ question, options,callback }) => 
         <form onSubmit={callback}>{options.map((opt: string, ind: number) => {
             return <div key={ind}> 
             <label>
-                <input type="radio" name="opt" value={opt} />
+                <input type="radio"
+                 name="opt"
+                  value={opt}
+                   />
                 {opt}
                 </label> 
                 </div>
