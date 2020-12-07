@@ -20,7 +20,8 @@ function App() {
   if (!quiz.length) {
     return <h1>Loading</h1>
   }
-  const handleSubmit = ((e:React.FormEvent<EventTarget>)=>{
+  const handleSubmit = ((e:React.FormEvent<EventTarget>,userAns:string)=>{
+    console.log(userAns)
     e.preventDefault();
     if (currentStep!==quiz.length-1)
      setCurrentStep(++currentStep)
