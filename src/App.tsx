@@ -42,7 +42,7 @@ function App() {
   }
   if (showResult) {
     return <div>
-      <h1>Your Score is {score}</h1>
+      <h1>Your Score is {score} out of {quiz.length}</h1>
     </div>
   }
   return (
