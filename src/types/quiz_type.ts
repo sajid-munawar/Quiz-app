@@ -11,6 +11,7 @@ export type question_type = {
 export type quiz_type ={
     answer: string
     question:string
+    correct_answer:string
     options:string[]
 }
 export type questionPropsType ={
